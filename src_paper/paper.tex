@@ -1,0 +1,100 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{pdfpages}
+\usepackage{booktabs}
+\usepackage{lipsum}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+    citecolor=black,
+}
+
+\begin{document}
+    \title{Towards multi-modal traffic prediction: a car and wheelchair case study}
+    \author{
+        \IEEEauthorblockN{Pierre LAPOLLA}
+        \IEEEauthorblockA{
+            \textit{LyRIDS ECE-Paris}\\
+            Paris, France \\
+            pierre.lapolla@edu.ece.fr
+        }
+        \and
+        \IEEEauthorblockN{Guilherme MEDEIROS MACHADO}
+        \IEEEauthorblockA{
+            \textit{LyRIDS ECE-Paris}\\
+            Paris, France \\
+            gmedeirosmachado@ece.fr
+        }
+        \and
+        \IEEEauthorblockN{Frédéric RAVAUT}
+        \IEEEauthorblockA{
+            \textit{LyRIDS ECE-Paris}\\
+            Paris, France \\
+            frederic.ravaut@ece.fr
+        }
+    }
+    \maketitle
+
+    \begin{abstract}
+        Itinerary recommendation systems are used on a daily basis by a wide range of people, to go from a starting
+        place to their destination.
+        However, most existing systems do not consider accessibility constraints specific to wheelchair users.
+        There is also not much data available on wheelchair users itinerary.
+        In this context, this paper proposes an adaptation and evaluation of an existing itinerary recommendation
+        system: Diffusion Convolutional Recurrent Neural Network (DCRNN)~\cite{DCRNN}.
+        This adaptation is capable to handle multiple locomotion modes, specifically cars and wheelchairs, and computes
+        the time required to travel from point A to point B\@.
+        Besides the model adaptation, this study proposes a method to derive wheelchair traffic data from a dataset of
+        car traffic data.
+        Finally, the evaluation of the model is performed through the comparison to a baseline using the Mean Absolute
+        Error (MAE) and Mean Squared Error (MSE) error metrics.
+        The source code is available at \url{https://github.com/Deldrel/stage_ing4}.
+    \end{abstract}
+
+    \begin{IEEEkeywords}
+        graph neural network, traffic prediction, wheelchair
+    \end{IEEEkeywords}
+
+
+    \section{Introduction}\label{sec:introduction}
+    \input{sections/introduction}
+
+
+    \section{Related Work}\label{sec:related-work}
+    \input{sections/related_work}
+
+
+    \section{Experiments}\label{sec:experiments}
+    \input{sections/experiments}
+
+
+    \section{Results}\label{sec:results}
+    \input{sections/results}
+
+
+    \section{Discussion}\label{sec:discussion}
+    \input{sections/discussion}
+
+
+    \section{Conclusion}\label{sec:conclusion}
+    \input{sections/conclusion}
+
+    \section*{Acknowledgment}
+    The authors would like to thank Thomas ROUSTAN and all other colleagues for their valuable assistance and support
+    during this project.
+    \vspace{1em}
+
+    \bibliographystyle{unsrt}
+    \bibliography{../out/references}
+
+\end{document}

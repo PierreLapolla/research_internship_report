@@ -1,0 +1,48 @@
+The results of our adapted model are promising but also reveal areas that require further research.
+\begin{itemize}
+    \item \textbf{Car Traffic Prediction}:
+    Our model achieve a similar performance than the DCRNN baseline in terms of MAE and RMSE\@.
+    This suggests that our modifications are not penalizing the model's ability to handle car traffic data.
+    \item \textbf{Wheelchair Traffic Prediction}:
+    There is no baseline for wheelchair traffic prediction, as this is a novel contribution of our study.
+    The results are promising and suggest that the model can effectively handle wheelchair data.
+    The losses are very low compared to the car traffic prediction, this indicates better accuracy but needs to be
+    contextualized.
+    As our speed feature is not normalized and wheelchair speeds are significantly lower than car speeds, losses are
+    expected to be lower.
+    \item \textbf{Multi-Modal Traffic Prediction}:
+    The model's performance on multi-modal traffic prediction, combining cars and wheelchair data, is not as good as
+    expected.
+    This confirms the complexity of handling multiple locomotion modes with a single model.
+    The increase of the MAE and RMSE could come from the data and/or the model architecture.
+\end{itemize}
+\vspace{1em}
+
+Our study introduces some implications and limitations, a first implication is data derivation.
+Although it offers a new methodology, the process of obtaining wheelchair traffic data from car traffic data may add
+many biases.
+Even if this method is innovative, it highlights the need for dedicated data collection on other locomotion modes than
+cars.
+The second implication is scalability, as the performance on the METR-LA dataset suggests potential scalability.
+But the differences in results between cars, wheelchairs and both indicate otherwise.
+Lastly, the model generalization is a limitation.
+While the model performs well on the METR-LA dataset, its generalization to other areas remains untested.
+Further efforts are needed to evaluate the model across varied datasets.
+\vspace{1em}
+
+We propose several directions for future work.
+\begin{itemize}
+    \item \textbf{Data Collection}:
+    Conducting new data collection efforts could be beneficial for the research community.
+    Data from other countries or cities could allow more tests for better models.
+    \item \textbf{Model Improvement}:
+    Further improvements to the model architecture could enhance its performance on multi-modal traffic prediction.
+    Adding other techniques or dividing the prediction task between multiple models are possible directions of research.
+    \item \textbf{Adding Accessibility Features}:
+    Adding more accessibility features to the data, such as public transport accessibility, could emphasize the social
+    contribution of our study.
+    \item \textbf{Model Comparison}:
+    We could improve our understanding of the model's performance by comparing it to other models, and measuring its
+    performance on different metrics and horizons.
+\end{itemize}
+\vspace{1em}
